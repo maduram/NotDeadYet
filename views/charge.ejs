@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Not-Dead-Yet...</title>
+        <link rel='stylesheet' href='/stylesheets/chargestyles.css' />
+    </head>
+    <body>
+        <h1><a href="/">Not-Dead-Yet...</a></h1>
+        <h2>...But time to check-in: <%= user_email %></h2>
+
+        <p><b>Your last check-in was:</b> ...</p>
+
+        <form method="post" action="/charge">
+            <fieldset>
+                <p>
+                    <label for='sender'>
+                        Sender Name
+                    </label>:
+                    <input id="sender" name="sender" type="text" placeholder="Your Name"/>
+                </p>
+
+                <p>
+                    <label for='email'>
+                        Current Email
+                    </label>:
+                    <input id="email" name="email" type="text" value="<%- user_email %>"/>
+                </p>
+
+                <p>
+                    <label for='notify'>
+                        Let-Know List
+                    </label>:
+                    <input id="notify" name="notify" type="text" placeholder="Comma separated emails"/>
+                </p>
+
+                <p>
+                    <label for='message'>
+                        Message
+                    </label>
+                    <br />
+                    <textarea rows="15" cols="50" id="message" name="message" placeholder="Message that would be sent to your Let-Know List of contacts if you don't check-in."></textarea>
+                </p>
+
+                <p>
+                    <button id="checkin">Check-in</button>
+                </p>
+            </fieldset>
+        </form>
+
+        <script type="text/javascript">
+            /* Simple return of elements by id */
+            function elt(id)
+            {
+                return document.getElementById(id);
+            }
+            
+            /* Control what happens when "Check-in" is clicked */
+            elt('checkin').onclick = function (event)
+            {
+                event.preventDefaults();
+            };
+        </script>
+    </body>
+</html>

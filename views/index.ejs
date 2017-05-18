@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel='stylesheet' href='/stylesheets/mainstyles.css' />
+    </head>
+    <body>
+        <h1><a href="/">Not Dead Yet...</a></h1>
+        <h2>...But letting people know when the time comes.</h2>
+        
+       
+        <form action="/charge" method="post" id="purchase-stuff-form" enctype="application/x-www-form-urlencoded">
+            <input type="hidden" id="credit-token"  name="credit_token" value="" />
+            <div>
+                <fieldset>
+                <p>
+                    <label for="email">Email</label>:
+                    <input type="text" id="email" name="email" placeholder="Used to send check-in email"/>
+                    </p>
+        
+                <p><%= errors %></p>
+
+                <p>
+                    <label for="cost">Cost</label>:
+                    <input type="text" id="cost" name="cost" value="$5" disabled />
+                </p>
+
+                <p>
+                    <label for="credcard">Credit Card</label>:
+                    <input type="text" id="credcard" name="credcard" size="20" data-stripe='number' value="4242424242424242"/>
+                </p>
+
+                <p>
+                    <label for="cvccode">CVC</label>:
+                    <input type="text" id="cvccode" name="cvccode" size="4" data-stripe='cvc' value="123"/>
+                </p>
+
+                <p>
+                    <label for="cardexp">Expires</label>:
+                    <select id="cardexp" data-stripe='exp-month' name="exp-month">
+                        <option value="0" selected>Month</option>
+                        <option value="01" >01</option>
+                        <option value="02" >02</option>
+                        <option value="03" >03</option>
+                        <option value="04" >04</option>
+                        <option value="05" >05</option>
+                        <option value="06" >06</option>
+                        <option value="07" >07</option>
+                        <option value="08" >08</option>
+                        <option value="09" >09</option>
+                        <option value="10" >10</option>
+                        <option value="11" >11</option>
+                        <option value="12" >12</option>
+                    </select>
+                    /
+                    <select id="expyear" data-stripe='exp-year' name='exp-year'>
+                        <option value="0" selected>Year</option>
+                        <option value="2018" >2018</option>
+                        <option value="2019" >2019</option>
+                        <option value="2020" >2020</option>
+                        <option value="2021" >2021</option>
+                        <option value="2022" >2022</option>
+                        <option value="2023" >2023</option>
+                        <option value="2024" >2024</option>
+                        <option value="2025" >2025</option>
+                        <option value="2026" >2026</option>
+                        <option value="2027" >2027</option>
+                        <option value="2028" >2028</option>
+                        <option value="2029" >2029</option>
+                        <option value="2030" >2030</option>
+                        <option value="2031" >2031</option>
+                        <option value="2032" >2032</option>
+                        <option value="2033" >2033</option>
+                        <option value="2034" >2034</option>
+                        <option value="2035" >2035</option>
+                        <option value="2036" >2036</option>
+                        <option value="2036" >2037</option>
+                        <option value="2036" >2038</option>
+                        <option value="2036" >2039</option>
+                        <option value="2036" >2040</option>
+                    </select>
+                </p>
+
+                <p>Your card will be charged when you click the button below. A link will be mailed to you periodically that allows you to specify a message and who to send it to if you fail to check in.</p>
+
+                <p>
+                    <button id="purchase">Buy Peace-Of-Mind</button>
+                </p>
+
+            </fieldset>
+            </div>
+        </form>
+
+        <script>
+//            /* Simple return of element by id */
+//            function elt(id)
+//            {
+//                return document.getElementById(id);
+//            }
+//            
+//            /* Control what happens when button "purchase" is clicked */
+//            elt('purchase').onclick = function (event) {
+//                elt('purchase').disabled = true; // prevent additional clicks
+//
+//                var purchase_form = elt('purchase-stuff-form');
+//                
+//                //Stripe control
+//                Stripe.card.createToken(purchase_form, tokenResponseHandler);
+//            };
+//            
+//            /* Handle Stripe token */
+//            function tokenResponseHandler(status, response)
+//            {
+//                var purchase_form = elt('purchase-stuff-form');
+//                if (response.error) {
+//                    alert(response.error.message);
+//                    elt('purchase').disabled = false;
+//                } else {
+//                    elt('credit-token').value = response.id;
+//                    purchase_form.submit();
+//                }
+//            }
+
+
+        </script>
+    </body>
+</html>

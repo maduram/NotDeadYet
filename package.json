@@ -1,0 +1,42 @@
+{
+  "name": "hw5",
+  "version": "1.0.0",
+  "description": "Not Dead Yet app allows users to send their loved ones an email if they die.",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-generator": "^4.15.0",
+    "express-validator": "^3.2.0",
+    "morgan": "^1.8.1",
+    "mysql": "^2.13.0",
+    "nodemailer": "^4.0.1",
+    "path": "^0.12.7",
+    "request": "^2.81.0",
+    "stripe": "^4.19.0",
+    "validator": "^7.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maduram/NotDeadYet.git"
+  },
+  "keywords": [
+    "not",
+    "dead",
+    "yet",
+    "app",
+    "send",
+    "email",
+    "stripe"
+  ],
+  "author": "Madula Ramabathiran",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/maduram/NotDeadYet/issues"
+  },
+  "homepage": "https://github.com/maduram/NotDeadYet#readme"
+}
